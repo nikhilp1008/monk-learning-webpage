@@ -10,6 +10,10 @@ interface EndStatesViewProps {
   /** Display name of the persona the student picked ("Vedha" / "Drona"). */
   tutorName?: string;
   summaryData?: EndSessionResponse | null;
+  /** The topic the student chose, shown under the chapter when there is one. */
+  topicTitle?: string | null;
+  /** Sets of options the teacher offered (the denominator for answered). */
+  questionsAsked?: number;
   errorMessage?: string;
   /** Needed to save the board; without it the save button is not offered. */
   sessionId?: string | null;
@@ -22,6 +26,8 @@ export function EndStatesView({
   type,
   tutorName,
   summaryData,
+  topicTitle,
+  questionsAsked = 0,
   errorMessage,
   sessionId,
   onReturnToCatalogue,
@@ -30,6 +36,7 @@ export function EndStatesView({
 }: EndStatesViewProps) {
   const teacher = tutorName || getTutorName(DEFAULT_VOICE);
 
+  const [expanded, setExpanded] = useState(false);
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [saveError, setSaveError] = useState<string | null>(null);
 
@@ -110,6 +117,19 @@ export function EndStatesView({
     );
   }
 
+  // The server decides whether the class got far enough to have takeaways.
+  // False until the payload lands, so a full class never flashes an
+  // "ended early" message. No payload at all means the summary call failed.
+  const tooShort = summaryData?.too_short_for_summary === true;
+  const summaryFailed = !summaryData;
+  const points = summaryData?.summary_points ?? [];
+  const SHOWN = 2; // two lines read as a summary; six read as a receipt
+  const visible = expanded ? points : points.slice(0, SHOWN);
+  const rest = points.length - SHOWN;
+  const answered = summaryData?.questions_answered ?? 0;
+  // Floored at the answered count: "5 / 3" would call the student a liar.
+  const asked = Math.max(questionsAsked, answered);
+
   // STATE 3: Normal Session Summary (Ported from design-reference L682–739)
   return (
     <div className="flex flex-col items-center py-6 animate-ml-rise">
@@ -126,7 +146,9 @@ export function EndStatesView({
             Class dismissed.
           </h1>
           <p className="font-script font-bold text-[#DD4433] text-[1.02rem] mt-2" style={{ transform: "rotate(-0.4deg)" }}>
-            achha padha aaj — here&apos;s what we covered.
+            {tooShort
+              ? "That one ended early, so there\u2019s nothing to sum up yet."
+              : "achha padha aaj \u2014 here\u2019s what we covered."}
           </p>
         </div>
 
@@ -139,6 +161,9 @@ export function EndStatesView({
             <b className="block font-bold text-[1.1rem] tracking-[-0.01em] text-ink">
               {summaryData?.chapter_name || summaryData?.next_suggestion?.chapter_name || "Live Session"}
             </b>
+            {topicTitle && topicTitle !== summaryData?.chapter_name && (
+              <span className="block text-[0.86rem] text-ink font-semibold mt-1">{topicTitle}</span>
+            )}
             <span className="block text-[0.8rem] text-[#57534B] mt-1">
               taught by {teacher}, on the board
             </span>
@@ -161,7 +186,14 @@ export function EndStatesView({
                 Questions
               </span>
               <b className="block font-bold text-[1.6rem] tracking-[-0.03em] leading-none text-ink">
-                {summaryData?.questions_answered ?? summaryData?.mistakes_count ?? 0}
+                {asked > 0 ? (
+                  <>
+                    {answered}
+                    <span className="text-[#9C988C] text-[1.1rem]"> / {asked}</span>
+                  </>
+                ) : (
+                  answered
+                )}
               </b>
               <span className="block text-[0.76rem] font-bold text-[#157A45] mt-1">
                 checkpoint questions
@@ -177,26 +209,45 @@ export function EndStatesView({
             WHAT WE COVERED
           </span>
           <div className="flex flex-col gap-2.5 mt-1">
-            {summaryData?.summary_points && summaryData.summary_points.length > 0 ? (
-              summaryData.summary_points.map((pt, i) => (
-                <div key={i} className="flex items-center gap-2.5">
-                  <span className="w-5 h-5 flex-none rounded-full bg-[rgba(28,155,87,0.1)] border border-[rgba(28,155,87,0.35)] grid place-items-center">
-                    <svg viewBox="0 0 24 24" width={11} height={11} fill="none" stroke="#157A45" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M20 6 9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span className="font-script font-bold text-[1rem] text-ink">{pt}</span>
-                </div>
-              ))
+            {tooShort ? (
+              <>
+                <b className="text-ink">Too short to sum up</b>
+                <p className="text-[0.9rem] text-ink-light leading-snug">
+                  Takeaways start once you&apos;ve finished a couple of segments. Pick the chapter back up whenever
+                  you&apos;re ready.
+                </p>
+              </>
+            ) : summaryFailed ? (
+              <>
+                <b className="text-ink">Summary unavailable</b>
+                <p className="text-[0.9rem] text-ink-light leading-snug">
+                  The class is saved — this part just couldn&apos;t be loaded. Your notes still have everything that
+                  was on the board.
+                </p>
+              </>
             ) : (
-              <div className="flex items-center gap-2.5">
-                <span className="w-5 h-5 flex-none rounded-full bg-[rgba(28,155,87,0.1)] border border-[rgba(28,155,87,0.35)] grid place-items-center">
-                  <svg viewBox="0 0 24 24" width={11} height={11} fill="none" stroke="#157A45" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M20 6 9 17l-5-5" />
-                  </svg>
-                </span>
-                <span className="font-script font-bold text-[1rem] text-ink">Key concepts covered with {teacher} on the board</span>
-              </div>
+              <>
+                {visible.map((pt, i) => (
+                  <div key={i} className="flex items-center gap-2.5">
+                    <span className="w-5 h-5 flex-none rounded-full bg-[rgba(28,155,87,0.1)] border border-[rgba(28,155,87,0.35)] grid place-items-center">
+                      <svg viewBox="0 0 24 24" width={11} height={11} fill="none" stroke="#157A45" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="font-script font-bold text-[1rem] text-ink">{pt}</span>
+                  </div>
+                ))}
+                {rest > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setExpanded((v) => !v)}
+                    aria-expanded={expanded}
+                    className="self-start text-[0.8rem] font-bold text-ink-light hover:text-ink"
+                  >
+                    {expanded ? "Less" : `${rest} more`}
+                  </button>
+                )}
+              </>
             )}
           </div>
         </div>

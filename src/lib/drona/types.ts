@@ -75,6 +75,9 @@ export interface EndSessionResponse {
   questions_answered?: number;
   /** Chapter the session belonged to. */
   chapter_name?: string | null;
+  /** The server decides whether the class got far enough (two segments) to
+   *  have takeaways; "no points" and "too early for points" differ. */
+  too_short_for_summary?: boolean;
   next_suggestion?: {
     chapter_id: string;
     chapter_name: string;

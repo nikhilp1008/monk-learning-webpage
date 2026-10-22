@@ -141,6 +141,12 @@ export default function LearnPage() {
   // "proof moment"). Collected once per class at the summary; saying nothing
   // is the designed outcome when there is nothing honest to say.
   const [proof, setProof] = useState<ProofEvent[]>([]);
+  // Sets of options the teacher offered this class: the summary's denominator
+  // ("answered 3 / 4"). The end payload only reports how many were answered,
+  // so the page keeps the tally, as the phone's classroom does.
+  const askedRef = useRef(0);
+  const lastPhaseRef = useRef<string | null>(null);
+  const [questionsAsked, setQuestionsAsked] = useState(0);
   const gatherProof = useCallback(async (recorded: boolean) => {
     try {
       // Only a class the backend actually recorded counts as a class taken.
@@ -510,6 +516,8 @@ export default function LearnPage() {
       // The baseline the proof moment at the end is measured against. Taken
       // when a class STARTS (not on resume, which would hide earlier progress).
       void captureProof();
+      askedRef.current = 0;
+      lastPhaseRef.current = null;
       rememberActiveSession(sid, res.subtopic || utterance);
       resetSessionPlaybackState();
       setBoardLatex("");
@@ -610,6 +618,7 @@ export default function LearnPage() {
     try {
       const res = await endSession(sessionId);
       setSummaryData(res);
+      setQuestionsAsked(askedRef.current);
       setFlowState("summary");
       void gatherProof(true);
     } catch (err) {
@@ -865,7 +874,11 @@ export default function LearnPage() {
           pendingStateRef.current = null;
           if (!next) return;
 
-          if (next.phase) setSessionPhase(next.phase as any);
+          if (next.phase) {
+            if (next.phase === "awaiting_answer" && lastPhaseRef.current !== "awaiting_answer") askedRef.current += 1;
+            lastPhaseRef.current = String(next.phase);
+            setSessionPhase(next.phase as any);
+          }
 
           if (next.answerResult) {
             setAnswerResult(next.answerResult);
@@ -984,6 +997,8 @@ export default function LearnPage() {
             type="normal"
             tutorName={teacher}
             summaryData={summaryData}
+            topicTitle={sessionTopic}
+            questionsAsked={questionsAsked}
             sessionId={sessionId}
             onReturnToCatalogue={handleReturnToPicker}
             onViewNotes={() => router.push("/notes")}
